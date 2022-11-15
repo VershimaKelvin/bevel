@@ -5,6 +5,7 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 @module
 abstract class RegisterModule {
   @preResolve
+  //these are just examples
   Future<PackageInfo> get packageInfo => PackageInfo.fromPlatform();
   InternetConnectionChecker get internetConnectionChecker =>
       InternetConnectionChecker();
