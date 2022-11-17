@@ -4,11 +4,13 @@ name: Test & Build
 on:
   pull_request:
     branches:
-      - release/develop
-  # push: 
-  #   branches:
-  #   - chats
-
+      - main
+      - master
+    push:
+      branches:
+        - main
+        - master
+        - develop
 jobs:
   build:
     runs-on: ubuntu-latest
