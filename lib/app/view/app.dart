@@ -13,10 +13,9 @@ class App extends StatelessWidget {
         //providers should be put here, remove const key word
       ],
       child: const MaterialApp(
-        initialRoute: Routes.test,
+        initialRoute: Routes.homeScreen,
         //all routes should be created in the route file not here
-
-        onGenerateRoute: generateRoute,
+        // onGenerateRoute: generateRoute,
       ),
     );
   }
