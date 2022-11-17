@@ -17,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyCustomAppbar(),
-      backgroundColor: AppColors.green,
       body: const Image(
         image: AssetImage(AppAsset.loanBag),
       )
