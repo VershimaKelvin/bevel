@@ -11,7 +11,7 @@ on:
 name: "Build & Release"
 jobs:
   build:
-    name: CI inmplementation
+    name: Build & Release
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
