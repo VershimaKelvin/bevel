@@ -11,7 +11,7 @@ on:
 name: "Build & Release"
 jobs:
   build:
-    name: Build & Release
+    name: Run Test
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
