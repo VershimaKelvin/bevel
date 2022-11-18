@@ -1,7 +1,10 @@
-on: [push, fork]
-    branches:
-      - main
-      - master
+on:
+  pull_request:
+  push:
+      branches:
+        - dev
+        - main
+
 name: "Build & Release"
 jobs:
   build:
