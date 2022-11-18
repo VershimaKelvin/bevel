@@ -12,10 +12,10 @@ on:
 
 
 
-name: "Vershima Kelvin"
+name: "Vershima Kelvin ityavyar"
 jobs:
   build:
-    name: Run Test
+    name: Run test for merging triggers
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
