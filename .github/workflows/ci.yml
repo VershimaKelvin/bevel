@@ -5,14 +5,11 @@ on:
 # simply put: if u push or merge PR to either main or dev branches, the workflow will be triggered
 
   pull_request:
-    branches:
-      - main
-      - master
   push:
     branches:
       - main
       - master
-      - develop
+
 
 
 name: "Vershima Kelvin"
