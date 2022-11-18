@@ -27,7 +27,7 @@ jobs:
 #      - run: flutter analyze
       - run: flutter format lib
       - run: git diff
-      - run: flutter build apk --debug --split-per-abi
+#      - run: flutter build apk --debug --split-per-abi
 #     - run: flutter test
       - run: flutter pub run build_runner build
 #      - run: flutter build apk --flavor development -t lib/main_development.dart
