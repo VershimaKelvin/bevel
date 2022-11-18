@@ -1,19 +1,22 @@
 on:
+
+#these events will trigger this workflow
+#this work is triggered on pull request and on pushes into these branches
+
   pull_request:
     branches:
       - main
-      - dev
+      - master
   push:
     branches:
       - main
-      - dev
-
-
-name: "Quality Assurance"
+      - master
+      - develop
+name: "Build & Release"
 jobs:
   build:
     name: Run Test
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
@@ -21,24 +24,27 @@ jobs:
           flutter-version: '3.0.5'
           channel: 'stable'
 
-        #For quality code assurance, these actions will be executed sequentially
-
-        name: Instal Dependencies
       - run: flutter pub get
-
-        name: format all file in the libe directory
-      - run: flutter format lib
-
-        name: Analyze Code, searching for problems and errors
+        name: analyze code
       - run: flutter analyze
+        name: format lib folder
+      - run: flutter format lib
+      - run: get difference between files
+###      - run: flutter build apk --debug --split-per-abi
+#      - run: flutter test
+#      - run: flutter packages pub run build_runner build --delete-conflicting-outputs
+##      - run: flutter build apk --flavor development -t lib/main.dart
+###      - name: Push to Releases
+###        uses: ncipollo/release-action@v1
+####        with:
+####          artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
+####          tag: v1.0.${{ github.run_number }}
+####          token: ${{ secrets.TOKEN }}
 
-        name: Generate necessary files and delete conflicting files
-      - run: flutter packages pub run build_runner build --delete-conflicting-outputs
-
-        name: Track changes made on a file
-      - run: git diff
-
-        name: Run test written in the test folder
-      - run: flutter test
 
 
+
+
+
+# push to master, main, develop
+# pull request on main master
