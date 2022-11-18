@@ -1,5 +1,6 @@
 on:
-#these are
+#these events will trigger this workflow
+#whenever thekd dd,d;fg,fgp
 
   pull_request:
     branches:
