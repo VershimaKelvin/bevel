@@ -1,15 +1,23 @@
 on:
-  pull_request:
-    push:
-      branches:
-        - dev
-        - main
 
-name: "Build & Release"
+  #  These events will trigger the work flow on the specified branches
+  # simply put: if u push or merge PR to either main or dev branches, these events will triger
+
+  pull_request:
+    branches:
+      - main
+      - dev
+  push:
+    branches:
+      - main
+      - dev
+
+
+name: "Quality Assurance"
 jobs:
   build:
     name: Run Test
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v2
@@ -27,16 +35,4 @@ jobs:
       - run: git diff
       - run: flutter packages pub run build_runner build --delete-conflicting-outputs
       - run: flutter build apk --debug --split-per-abi
-      - name: Push to Releases
-        uses: ncipollo/release-action@v1
-        with:
-           artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
-           tag: v1.0.${{ github.run_number }}
-           token: ${{ secrets.TOKEN }}
 
-
-
-
-
-# push to master, main, develop
-# pull request on main master
