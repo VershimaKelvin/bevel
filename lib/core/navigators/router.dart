@@ -3,7 +3,6 @@ import 'package:bevel/features/home/home_screen.dart';
 import 'package:bevel/features/home/test_screen.dart';
 import 'package:flutter/material.dart';
 
-
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case Routes.homeScreen:
@@ -11,7 +10,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         routeName: settings.name,
         viewToShow: const HomeScreen(),
       );
-
 
     case Routes.test:
       return _getPageRoute(

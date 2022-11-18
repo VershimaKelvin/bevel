@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyCustomAppbar extends StatefulWidget{
+class MyCustomAppbar extends StatefulWidget {
   const MyCustomAppbar({Key? key}) : super(key: key);
 
   @override

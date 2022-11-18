@@ -14,6 +14,6 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
   await bootstrap(
-        () => const App(),
+    () => const App(),
   );
 }
