@@ -5,6 +5,6 @@ import 'package:bevel/core/di/di_container.dart';
 Future<void> main() async {
   await configureDependencies();
   await bootstrap(
-        () => const App(),
+    () => const App(),
   );
 }

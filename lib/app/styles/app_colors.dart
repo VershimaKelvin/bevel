@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-
   static const Color primaryColor = Color(0xff00296B);
   static const Color textColor1 = Color(0xff202020);
   static const Color neutralGray = Color(0xff334155);
 
- //The color scheme will be changed to match that provided by the design team.0F172A
+  //The color scheme will be changed to match that provided by the design team.0F172A
 
   static const Map<int, Color> colorScratch = {
     50: Color.fromRGBO(7, 45, 114, .1),

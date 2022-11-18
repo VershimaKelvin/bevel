@@ -13,6 +13,6 @@ import 'package:flutter/material.dart';
 Future<void> main() async {
   await configureDependencies();
   await bootstrap(
-        () => const App(),
+    () => const App(),
   );
 }
