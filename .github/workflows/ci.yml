@@ -12,7 +12,9 @@ on:
       - main
       - master
       - develop
-name: "Build & Release"
+
+
+name: "Quality assurance"
 jobs:
   build:
     name: Run Test
