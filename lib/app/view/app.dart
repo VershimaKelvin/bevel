@@ -1,5 +1,4 @@
 import 'package:bevel/core/navigators/route_names.dart';
-import 'package:bevel/core/navigators/router.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
