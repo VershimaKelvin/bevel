@@ -1,7 +1,7 @@
 on:
 
-#these events will trigger this workflow
-#this work is triggered on pull request and on pushes into these branches
+# These events will trigger the work flow on the specified branches
+# simply put: if u push or merge PR to either main or dev branches, the workflow will be triggered
 
   pull_request:
     branches:
