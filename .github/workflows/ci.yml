@@ -1,6 +1,6 @@
 on:
 #these events will trigger this workflow
-#whenever thekd dd,d;fg,fgp
+#this work is triggered on pull request and on pushes into these branches
 
   pull_request:
     branches:
