@@ -24,9 +24,11 @@ jobs:
           channel: 'stable'
 
       - run: flutter pub get
-###      - run: flutter analyze
-##      - run: flutter format lib
-##      - run: git diff
+        name: Run analyze
+      - run: flutter analyze
+        name: Run format lib
+      - run: flutter format lib
+      - run: git diff
 ###      - run: flutter build apk --debug --split-per-abi
 #      - run: flutter test
 #      - run: flutter packages pub run build_runner build --delete-conflicting-outputs
