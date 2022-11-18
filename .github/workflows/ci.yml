@@ -29,7 +29,7 @@ jobs:
       - run: git diff
 #      - run: flutter build apk --debug --split-per-abi
 #     - run: flutter test
-      - run: flutter pub run build_runner build
+      - run: flutter packages pub run build_runner build --delete-conflicting-outputs
 #      - run: flutter build apk --flavor development -t lib/main_development.dart
 ##      - name: Push to Releases
 ##        uses: ncipollo/release-action@v1
