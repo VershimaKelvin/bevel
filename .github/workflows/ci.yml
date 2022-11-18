@@ -11,7 +11,7 @@ on:
 name: "Build & Release"
 jobs:
   build:
-    name: Build & Release
+    name: Run Test
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -31,12 +31,11 @@ jobs:
       - run: flutter packages pub run build_runner build --delete-conflicting-outputs
       - run: flutter build apk --debug --split-per-abi
       - name: Push to Releases
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
-        tag: v1.0.${{ github.run_number }}
-        token: ${{ secrets.TOKEN }}
-
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
+          tag: v1.0.${{ github.run_number }}
+          token: ${{ secrets.TOKEN }}
 
 
 
