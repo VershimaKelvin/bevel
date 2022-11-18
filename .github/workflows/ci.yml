@@ -1,8 +1,4 @@
 on:
-
-#  These events will trigger the work flow on the specified branches
-# simply put: if u push or merge PR to either main or dev branches, these events will triger
-
   pull_request:
     branches:
       - main
