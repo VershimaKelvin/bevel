@@ -1,3 +1,4 @@
+
 on:
 
 # These events will trigger the work flow on the specified branches
@@ -14,7 +15,7 @@ on:
       - develop
 
 
-name: "Quality assurance"
+name: "Vershima Kelvin"
 jobs:
   build:
     name: Run Test
