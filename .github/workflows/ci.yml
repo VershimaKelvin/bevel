@@ -30,7 +30,7 @@ jobs:
 ###      - run: flutter build apk --debug --split-per-abi
 #      - run: flutter test
 #      - run: flutter packages pub run build_runner build --delete-conflicting-outputs
-##      - run: flutter build apk --flavor development -t lib/main_development.dart
+##      - run: flutter build apk --flavor development -t lib/main.dart
 ###      - name: Push to Releases
 ###        uses: ncipollo/release-action@v1
 ####        with:
