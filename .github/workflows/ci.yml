@@ -29,7 +29,9 @@ jobs:
 
 #For quality code assurance, these actions will be executed sequentially
 
+        name: Instal Dependencies
       - run: flutter pub get
+
         name: analyze code
       - run: flutter analyze
         name: format lib folder
